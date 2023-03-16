@@ -2,7 +2,7 @@
 This project is an implementation of a Learning Management System like Blackboard or Canvas. This project was for a grade in the Full-stack Development in C# course 
 offered by Florida State University. This course was taught by Dr. Chris Mills, and although sparingly, some parts of the code were modeled by his implementations.
 
-This is the command line version of the Learning Management System which will eventually (if not already) be converted to UWP & XAML to provide a graphical user-interface.
+This is the command line version of the Learning Management System which will eventually (if not already) be converted to a UWP & XAML application.
 
 # Features
 * Crud of the following models:
