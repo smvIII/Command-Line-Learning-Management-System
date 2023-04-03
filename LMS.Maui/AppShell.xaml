@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="LMS.Maui.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:LMS.Maui"
+    xmlns:pages="clr-namespace:LMS.Maui.Pages"
+    Shell.FlyoutBehavior="Flyout" 
+    FlyoutHeaderBehavior="Fixed"
+    FlyoutVerticalScrollMode="Auto">
+
+    
+    <!-- MainPage -->
+    <ShellContent
+        Title="Sign-out"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    
+    <!-- Routes for other pages -->
+    <ShellContent Route="studentPage" ContentTemplate="{DataTemplate pages:StudentPage}" />
+    <ShellContent Route="instructorTAPage" ContentTemplate="{DataTemplate pages:InstructorTAPage}" />
+    <ShellContent Route="lmsAdminPage" ContentTemplate="{DataTemplate pages:LMSAdminPage}" />
+
+</Shell>

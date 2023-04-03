@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LMS.Maui.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="20"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Welcome to the LMS!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Please select which type of user you are."
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="StudentBtn"
+                Text="Enrolled Student"
+                SemanticProperties.Hint="Switches view to student sign in page when clicked."
+                Clicked="OnNavigate1Clicked"
+                WidthRequest="200"
+                HeightRequest="40"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="InstructorTABtn"
+                Text="Instructor or TA"
+                SemanticProperties.Hint="Switches view to instructor sign in page when clicked."
+                Clicked="OnNavigate2Clicked"
+                WidthRequest="200"
+                HeightRequest="40"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="LMSAdminBtn"
+                Text="LMS Administrator"
+                SemanticProperties.Hint="Switches view to LMS A dmin sign in page when clicked."
+                Clicked="OnNavigate3Clicked"
+                WidthRequest="200"
+                HeightRequest="40"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

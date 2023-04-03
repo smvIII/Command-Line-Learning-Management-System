@@ -12,7 +12,7 @@ namespace cop4870
 {
     internal class Assignment1
     {
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
 
             bool navMainMenu = true;
