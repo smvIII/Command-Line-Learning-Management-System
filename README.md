@@ -2,7 +2,7 @@
 This project is an implementation of a Learning Management System (LMS) like Blackboard or Canvas. This project was for a grade in the Full-stack Development in C# course 
 offered by Florida State University. This course was taught by Dr. Chris Mills, and although sparingly, some parts of the code were modeled by his implementations.
 
-This is the command line version of the LMS which will eventually (if not already) be converted to a UWP & XAML application.
+This is the command line version of the LMS which will eventually (if not already) be converted to a .NET Maui application.
 
 # Features
 * Crud of the following models:
