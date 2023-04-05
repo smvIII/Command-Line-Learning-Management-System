@@ -1,4 +1,4 @@
-namespace LMS.Maui.Pages;
+namespace LMS.Maui.Pages.InstructorPages;
 
 public partial class InstructorTAPage : ContentPage
 {

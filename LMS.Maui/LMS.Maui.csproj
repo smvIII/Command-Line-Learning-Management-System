@@ -49,19 +49,34 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Pages\StudentPage.xaml.cs">
+	  <Compile Update="Pages\StudentPages\StudentPage.xaml.cs">
 	    <DependentUpon>StudentPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\InstructorTAPage.xaml">
+	  <MauiXaml Update="Pages\AdminPages\AddRemovePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\LMSAdminPage.xaml">
+	  <MauiXaml Update="Pages\AdminPages\CreatePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\StudentPage.xaml">
+	  <MauiXaml Update="Pages\AdminPages\ListPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\AdminPages\SearchPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\AdminPages\UpdatePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\InstructorPages\InstructorTAPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\AdminPages\LMSAdminPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\StudentPages\StudentPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

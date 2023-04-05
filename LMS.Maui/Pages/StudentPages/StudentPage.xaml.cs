@@ -1,4 +1,4 @@
-namespace LMS.Maui.Pages;
+namespace LMS.Maui.Pages.StudentPages;
 
 public partial class StudentPage : ContentPage
 {

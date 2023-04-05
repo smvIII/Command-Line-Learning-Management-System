@@ -4,21 +4,73 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:LMS.Maui"
-    xmlns:pages="clr-namespace:LMS.Maui.Pages"
+    xmlns:adminpages="clr-namespace:LMS.Maui.Pages.AdminPages"
+    xmlns:studentpages="clr-namespace:LMS.Maui.Pages.StudentPages"
+    xmlns:instructorpages="clr-namespace:LMS.Maui.Pages.InstructorPages"
+    
     Shell.FlyoutBehavior="Flyout" 
     FlyoutHeaderBehavior="Fixed"
-    FlyoutVerticalScrollMode="Auto">
+    FlyoutVerticalScrollMode="Auto"
+    Shell.NavBarIsVisible="False" >
 
-    
     <!-- MainPage -->
     <ShellContent
         Title="Sign-out"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
+    <!-- Admin flyouts -->
     
-    <!-- Routes for other pages -->
-    <ShellContent Route="studentPage" ContentTemplate="{DataTemplate pages:StudentPage}" />
-    <ShellContent Route="instructorTAPage" ContentTemplate="{DataTemplate pages:InstructorTAPage}" />
-    <ShellContent Route="lmsAdminPage" ContentTemplate="{DataTemplate pages:LMSAdminPage}" />
+    <FlyoutItem x:Name="AdminGoBackFlyout" Title="Go back" FlyoutItemIsVisible="False">
+        <ShellContent ContentTemplate="{DataTemplate adminpages:LMSAdminPage}" />
+    </FlyoutItem>
+    
+    
+    <!-- Routes for other users for flyout menu -->
+    <ShellContent 
+        Route="studentPage" 
+        ContentTemplate="{DataTemplate studentpages:StudentPage}"
+        FlyoutItemIsVisible="False" />
+
+    <ShellContent 
+        Route="instructorTAPage" 
+        ContentTemplate="{DataTemplate instructorpages:InstructorTAPage}"
+        FlyoutItemIsVisible="False" />
+    
+    <ShellContent 
+        Route="lmsAdminPage" 
+        ContentTemplate="{DataTemplate adminpages:LMSAdminPage}" 
+        FlyoutItemIsVisible="False" />
+    
+    <!-- Routes for admin pages -->
+    <ShellContent
+        Route="createPage"
+        ContentTemplate="{DataTemplate adminpages:CreatePage}" 
+        FlyoutItemIsVisible="False"/>
+
+    <ShellContent
+        Route="searchPage"
+        ContentTemplate="{DataTemplate adminpages:SearchPage}" 
+        FlyoutItemIsVisible="False"/>
+
+    <ShellContent
+        Route="updatePage"
+        ContentTemplate="{DataTemplate adminpages:UpdatePage}" 
+        FlyoutItemIsVisible="False"/>
+
+    <ShellContent
+        Route="listPage"
+        ContentTemplate="{DataTemplate adminpages:ListPage}" 
+        FlyoutItemIsVisible="False"/>
+
+    <ShellContent
+        Route="addRemovePage"
+        ContentTemplate="{DataTemplate adminpages:AddRemovePage}" 
+        FlyoutItemIsVisible="False" />
+
+    
+    
+    
 
 </Shell>
+    
