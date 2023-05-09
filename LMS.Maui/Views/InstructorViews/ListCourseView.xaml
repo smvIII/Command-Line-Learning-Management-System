@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LMS.Maui.Views.InstructorViews.ListCourseView"
+             Title="ListCourseView">
+    <VerticalStackLayout Spacing="20" Margin="50">
+        <Label 
+            Text="LIST COURSE VIEW"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+        <ListView 
+            ItemsSource="{Binding Courses}"
+            SelectedItem="{Binding SelectedCourse}"/>
+
+
+        <Label
+            Text="Selected Course Roster:" 
+            Margin="11,0,0,0"/>
+
+        <!-- My implementation of the second ListView that doesnt work-->
+        <ListView
+            ItemsSource="{Binding Roster}"
+            SelectionMode="None"/>
+
+    </VerticalStackLayout>
+</ContentPage>

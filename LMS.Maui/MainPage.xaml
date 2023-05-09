@@ -40,14 +40,14 @@
                 HeightRequest="40"
                 HorizontalOptions="Center" />
 
-            <Button
+            <!--Button
                 x:Name="LMSAdminBtn"
                 Text="LMS Administrator"
                 SemanticProperties.Hint="Switches view to LMS A dmin sign in page when clicked."
                 Clicked="OnNavigate3Clicked"
                 WidthRequest="200"
                 HeightRequest="40"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" /-->
 
         </VerticalStackLayout>
     </ScrollView>

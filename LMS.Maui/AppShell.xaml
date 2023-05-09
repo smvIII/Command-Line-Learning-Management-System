@@ -4,9 +4,8 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:LMS.Maui"
-    xmlns:adminpages="clr-namespace:LMS.Maui.Pages.AdminPages"
-    xmlns:studentpages="clr-namespace:LMS.Maui.Pages.StudentPages"
-    xmlns:instructorpages="clr-namespace:LMS.Maui.Pages.InstructorPages"
+    xmlns:studentviews="clr-namespace:LMS.Maui.Views.StudentViews"
+    xmlns:instructorviews="clr-namespace:LMS.Maui.Views.InstructorViews"
     
     Shell.FlyoutBehavior="Flyout" 
     FlyoutHeaderBehavior="Fixed"
@@ -22,55 +21,64 @@
     <!-- Admin flyouts -->
     
     <FlyoutItem x:Name="AdminGoBackFlyout" Title="Go back" FlyoutItemIsVisible="False">
-        <ShellContent ContentTemplate="{DataTemplate adminpages:LMSAdminPage}" />
+        <ShellContent ContentTemplate="{DataTemplate instructorviews:InstructorView}" />
     </FlyoutItem>
     
     
     <!-- Routes for other users for flyout menu -->
     <ShellContent 
         Route="studentPage" 
-        ContentTemplate="{DataTemplate studentpages:StudentPage}"
+        ContentTemplate="{DataTemplate studentviews:StudentView}"
         FlyoutItemIsVisible="False" />
 
     <ShellContent 
         Route="instructorTAPage" 
-        ContentTemplate="{DataTemplate instructorpages:InstructorTAPage}"
+        ContentTemplate="{DataTemplate instructorviews:InstructorView}"
         FlyoutItemIsVisible="False" />
     
-    <ShellContent 
+    <!--ShellContent 
         Route="lmsAdminPage" 
-        ContentTemplate="{DataTemplate adminpages:LMSAdminPage}" 
-        FlyoutItemIsVisible="False" />
+        ContentTemplate="{DataTemplate adminviews:LMSAdminView}" 
+        FlyoutItemIsVisible="False" /-->
     
-    <!-- Routes for admin pages -->
+    <!-- Routes for instructor pages -->
+    
+    <!-- Routes for course pages-->
     <ShellContent
-        Route="createPage"
-        ContentTemplate="{DataTemplate adminpages:CreatePage}" 
+        Route="createCourseView"
+        ContentTemplate="{DataTemplate instructorviews:CreateCourseView}"
         FlyoutItemIsVisible="False"/>
 
     <ShellContent
-        Route="searchPage"
-        ContentTemplate="{DataTemplate adminpages:SearchPage}" 
+        Route="listCourseView"
+        ContentTemplate="{DataTemplate instructorviews:ListCourseView}"
         FlyoutItemIsVisible="False"/>
 
     <ShellContent
-        Route="updatePage"
-        ContentTemplate="{DataTemplate adminpages:UpdatePage}" 
+        Route="addPersonToCourseView"
+        ContentTemplate="{DataTemplate instructorviews:AddPersonToCourseView}"
+        FlyoutItemIsVisible="False"/>
+
+    <!-- Routes for person pages-->
+    <ShellContent
+        Route="createPersonView"
+        ContentTemplate="{DataTemplate instructorviews:CreatePersonView}"
         FlyoutItemIsVisible="False"/>
 
     <ShellContent
-        Route="listPage"
-        ContentTemplate="{DataTemplate adminpages:ListPage}" 
+        Route="listPersonView"
+        ContentTemplate="{DataTemplate instructorviews:ListPersonView}"
         FlyoutItemIsVisible="False"/>
 
-    <ShellContent
-        Route="addRemovePage"
-        ContentTemplate="{DataTemplate adminpages:AddRemovePage}" 
-        FlyoutItemIsVisible="False" />
+   
+    
 
-    
-    
-    
+    <!-- Routes for student pages -->
+    <ShellContent
+        Route="selectedStudentView"
+        ContentTemplate="{DataTemplate studentviews:SelectedStudentView}"
+        FlyoutItemIsVisible="False"/>
+
 
 </Shell>
     

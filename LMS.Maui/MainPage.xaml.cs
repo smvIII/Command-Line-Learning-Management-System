@@ -1,14 +1,18 @@
 ﻿//using Android.OS;
-using LMS.Maui.Pages;
+//using LMS.Maui.Pages;
+using LMS.Maui.ViewModels;
 
 namespace LMS.Maui
 {
     public partial class MainPage : ContentPage
     {
 
+        //private Services _services;
         public MainPage()
         {
             InitializeComponent();
+            //BindingContext = new MainViewModel();
+
             Shell.SetFlyoutBehavior(this, FlyoutBehavior.Disabled);
         }
         
@@ -27,12 +31,12 @@ namespace LMS.Maui
             SemanticScreenReader.Announce(InstructorTABtn.Text);
         }
 
-        private async void OnNavigate3Clicked(object sender, EventArgs e) // admin
+        /*private async void OnNavigate3Clicked(object sender, EventArgs e) // admin
         {
             //SetAdminFlyoutItemsVisibility(true);
             await Shell.Current.GoToAsync("//lmsAdminPage");
             SemanticScreenReader.Announce(LMSAdminBtn.Text);
-        }
+        } */
         /*public static void SetAdminFlyoutItemsVisibility(bool isVisible) // sets goback as visible
         {
             var adminFlyoutItem1 = Shell.Current.FindByName<FlyoutItem>("AdminFlyoutItem1");

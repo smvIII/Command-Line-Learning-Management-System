@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LMS.Maui.Views.StudentViews.StudentView"
+             Title="StudentView">
+    <VerticalStackLayout Margin="50">
+        <Label 
+            Text="STUDENT VIEW"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+            Text="Please select which student you are"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+
+        <ListView
+            ItemsSource="{Binding People}"
+            SelectedItem="{Binding SelectedPerson}"/>
+
+        <Button
+            x:Name="loginButton"
+            Text="Login"
+            Clicked="LoginClicked"
+            WidthRequest="200"
+            HeightRequest="40"  />
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

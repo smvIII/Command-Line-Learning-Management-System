@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LMS.Maui.Pages.AdminPages.LMSAdminPage"
-             Title="LMSAdminPage">
-
+             x:Class="LMS.Maui.Views.InstructorViews.InstructorView"
+             Title="InstructorView">
     <StackLayout Margin="50">
+        <Label 
+            Text="INSTRUCTOR VIEW"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
 
         <Grid RowDefinitions="50, Auto, Auto, Auto, Auto, Auto, Auto, *" 
               ColumnDefinitions="*,*"
               ColumnSpacing="20"
               RowSpacing="8">
-              
+
             <!-- COURSE BUTTONS -->
             <Label Grid.Row ="0" Grid.Column="0" 
                    Text="Course Options" FontSize="20" 
@@ -20,12 +23,12 @@
                 x:Name="createCourseBtn"
                 Text="Create course"
                 Clicked="OnNavigate1Clicked" />
-            
+
             <Button Grid.Row="2" Grid.Column="0" 
                 x:Name="courseSearchBtn"
                 Text="Search for course"
                 Clicked="OnNavigate2Clicked" />
-                
+
             <Button Grid.Row="3" Grid.Column="0" 
                 x:Name="updateCourseBtn"
                 Text="Update course" 
@@ -50,66 +53,32 @@
 
             <Button Grid.Row="1" Grid.Column="1" 
                 x:Name="createPersonBtn"
-                Text="Create person" />
+                Text="Create person" 
+                Clicked="OnNavigate6Clicked" />
 
             <Button Grid.Row="2" Grid.Column="1" 
                 x:Name="personSearchBtn"
-                Text="Search for person" />
+                Text="Search for person" 
+                Clicked="OnNavigate2Clicked" />
 
             <Button Grid.Row="3" Grid.Column="1" 
                 x:Name="updatePersonBtn"
-                Text="Update person" />
+                Text="Update person" 
+                Clicked="OnNavigate3Clicked" />
 
             <Button Grid.Row="4" Grid.Column="1" 
                 x:Name="listPeopleBtn"
-                Text="List people" />
+                Text="List people" 
+                Clicked="OnNavigate8Clicked" />
 
             <Button Grid.Row="5" Grid.Column="1" 
                 x:Name="rmPersonFromCourseBtn"
-                Text="Remove person remove course" />
+                Text="Remove person remove course" 
+                Clicked="OnNavigate5Clicked" />
 
 
         </Grid>
-        
+
     </StackLayout>
 
-    <!--VerticalStackLayout Margin="65"
-
-        Spacing="5" >
-        <Label 
-            Text="Please provide the admin password to continue."
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            FontSize="20"/>
-        <StackLayout>
-            <Label
-                Text="Password"
-                FontSize="16" />
-
-            <Grid>
-                <Frame 
-                    Opacity="16"
-                    BackgroundColor="White" />
-                <Entry
-                    BackgroundColor="Transparent"
-                    TextColor="Black"
-                    IsPassword="True"/>
-            </Grid>
-
-           
-
-
-        </StackLayout>
-
-        <Button
-                x:Name="StudentBtn"
-                Text="Login"
-                SemanticProperties.Hint="Checks if password is correct"
-                WidthRequest="200"
-                HeightRequest="40"
-                HorizontalOptions="Center" />
-
-    </VerticalStackLayout-->
-    
-    
 </ContentPage>

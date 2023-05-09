@@ -1,4 +1,6 @@
-﻿using LMS.Maui.Pages.AdminPages;
+﻿//using LMS.Maui.Pages.AdminPages;
+using LMS.Maui.Views.InstructorViews;
+using LMS.Maui.Views.StudentViews;
 
 namespace LMS.Maui
 {
@@ -7,6 +9,7 @@ namespace LMS.Maui
         public AppShell()
         {
             InitializeComponent();
+            //Routing.RegisterRoute("listPage", typeof(ListPage));
             //Shell.Current.Navigating += OnShellNavigating;
         }
 
@@ -14,9 +17,9 @@ namespace LMS.Maui
         // this handles making the go back flyout item disappear when it needs to 
         {
             var currentPage = Shell.Current?.CurrentPage;
-            if (currentPage.GetType() == typeof(LMSAdminPage))
+            if (currentPage.GetType() == typeof(InstructorView) || currentPage.GetType() == typeof(StudentView))
             {
-                LMSAdminPage.SetAdminFlyoutItemsVisibility(false);
+                InstructorView.SetAdminFlyoutItemsVisibility(false);
             }
         }
 

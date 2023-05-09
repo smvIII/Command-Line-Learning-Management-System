@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LMS.Maui.Pages.InstructorPages.InstructorTAPage"
-             Title="InstructorTAPage">
-    <VerticalStackLayout>
+             x:Class="LMS.Maui.Views.InstructorViews.ListPersonView"
+             Title="ListPersonView">
+    <VerticalStackLayout Margin="50">
         <Label 
-            Text="Welcome to the Instructor/TA page!"
+            Text="LIST PERSON"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <ListView
+            ItemsSource="{Binding People}" />
+
     </VerticalStackLayout>
 </ContentPage>

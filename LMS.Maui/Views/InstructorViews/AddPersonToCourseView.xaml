@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LMS.Maui.Views.InstructorViews.AddPersonToCourseView"
+             Title="AddPersonToCourseView">
+    <VerticalStackLayout Spacing ="20" Margin="50">
+        <Label 
+            Text="ADD PERSON TO COURSE VIEW"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label 
+            Text="Please select a student to add to course:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <ListView
+            ItemsSource="{Binding People}"
+            SelectedItem="{Binding SelectedPerson}" />
+
+        <Label 
+            Text="Please select a course to add student to:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <ListView
+            ItemsSource="{Binding Courses}"
+            SelectedItem="{Binding SelectedCourse}" />
+
+        <Button
+                x:Name="addStudentBtn"
+                Text="Add Student"
+                Clicked="AddClicked"
+                WidthRequest="200"
+                HeightRequest="40"
+                HorizontalOptions="Center" />
+        
+
+    </VerticalStackLayout>
+</ContentPage>

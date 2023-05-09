@@ -26,7 +26,7 @@ namespace LearningManagementSystem.Models.People
 
         private List<int> _grades;
 
-        /*
+        
         static public Student AddStudent()
         {
             Student newStudent = new Student();
@@ -77,7 +77,7 @@ namespace LearningManagementSystem.Models.People
 
 
         }
-        */
+        
 
         public static bool IsStudent(Person person)
         {

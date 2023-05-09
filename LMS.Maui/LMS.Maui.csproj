@@ -49,34 +49,32 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Pages\StudentPages\StudentPage.xaml.cs">
-	    <DependentUpon>StudentPage.xaml</DependentUpon>
-	  </Compile>
+	  <ProjectReference Include="..\LMS.Library\LMS.Library.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\AdminPages\AddRemovePage.xaml">
+	  <MauiXaml Update="Views\InstructorViews\AddPersonToCourseView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\AdminPages\CreatePage.xaml">
+	  <MauiXaml Update="Views\InstructorViews\CreateCourseView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\AdminPages\ListPage.xaml">
+	  <MauiXaml Update="Views\InstructorViews\CreatePersonView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\AdminPages\SearchPage.xaml">
+	  <MauiXaml Update="Views\InstructorViews\InstructorView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\AdminPages\UpdatePage.xaml">
+	  <MauiXaml Update="Views\InstructorViews\ListCourseView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\InstructorPages\InstructorTAPage.xaml">
+	  <MauiXaml Update="Views\InstructorViews\ListPersonView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\AdminPages\LMSAdminPage.xaml">
+	  <MauiXaml Update="Views\StudentViews\SelectedStudentView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\StudentPages\StudentPage.xaml">
+	  <MauiXaml Update="Views\StudentViews\StudentView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
